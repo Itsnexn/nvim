@@ -104,4 +104,4 @@ for more check out [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
 [zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
 
 # License
-itsnexn/nvim is licensed under the [MIT license](LICENSE.txt).
+itsnexn/nvim is licensed under the [MIT license](LICENSE).
