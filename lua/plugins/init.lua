@@ -67,7 +67,7 @@ return require("packer").startup(function(use)
 	-- use {"github/copilot.vim"}
 
 	-- {{ Other
-	use({ "blackcauldron7/surround.nvim" }) -- Vim surround but in lua
+	use({ "ur4ltz/surround.nvim" }) -- Vim surround but in lua
 	use({ "kyazdani42/nvim-tree.lua" }) -- File explorer/tree
 	use({ "akinsho/toggleterm.nvim" }) -- Term
 	use({ "tpope/vim-commentary" }) -- Comment stuff
@@ -98,6 +98,7 @@ return require("packer").startup(function(use)
 	use({ "ntpeters/vim-better-whitespace" }) -- highlight trailing whitespaces
 	use({ "folke/which-key.nvim" }) -- Show Keyboard shortcuts
 	use({ "vimwiki/vimwiki" }) -- Vim WIKI
+	use({ "tpope.io/vim/repeat" }) -- Vim WIKI
 
 	-- Distraction-free coding mode
 	use({ "folke/zen-mode.nvim" })
