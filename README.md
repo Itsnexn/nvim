@@ -27,7 +27,7 @@ git clone https://github.com/itsnexn/nvim.git $XDG_CONFIG_HOME/nvim
 
 4. **install plugins**
 
-because how we sourcing plugins you'll probably get a lot of error in first time, so you can ignore it for now. then enter `:luafile $XDG_CONFIG_HOME/nvim/lua/plgins/init.lua` after that you can simply enter `:PlugInstall` to install plugins.
+because how we sourcing plugins you'll probably get a lot of error in first time, so you can ignore it for now. then enter `:luafile $XDG_CONFIG_HOME/nvim/lua/plugins/init.lua` after that you can simply enter `:PlugInstall` to install plugins.
 
 5. **install Update treesitter**
 
