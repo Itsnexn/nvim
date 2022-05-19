@@ -2,7 +2,7 @@
 --            -== Bufferline ==-
 -- =============================================
 local bufferline = require("bufferline")
-local colors = require("tokyonight.colors").setup({})
+local g = vim.g
 
 bufferline.setup({
 	options = {
@@ -19,7 +19,7 @@ bufferline.setup({
 		right_trunc_marker = "",
 		max_name_length = 18,
 		max_prefix_length = 15,
-		tab_size = 23,
+		tab_size = 25,
 		diagnostics = "nvim_lsp",
 		diagnostics_update_in_insert = true,
 		diagnostics_indicator = function(count, _, _, _)
@@ -56,7 +56,7 @@ bufferline.setup({
 	},
 	highlights = {
 		fill = {
-			guibg = colors.bg_dark,
+			guibg = g.colors.bg_dark,
 		},
 	},
 })

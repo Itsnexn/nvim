@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/itsnexn/.local/cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/itsnexn/.local/cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/itsnexn/.local/cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/itsnexn/.local/cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/itsnexn/.local/cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
+local package_path_str = "/home/itsnexn/.local/cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/itsnexn/.local/cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/itsnexn/.local/cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/itsnexn/.local/cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/itsnexn/.local/cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -109,15 +109,15 @@ _G.packer_plugins = {
     path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
-  },
-  firenvim = {
-    loaded = true,
-    path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/firenvim",
-    url = "https://github.com/glacambre/firenvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -199,6 +199,11 @@ _G.packer_plugins = {
     path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["onedark.vim"] = {
+    loaded = true,
+    path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/onedark.vim",
+    url = "https://github.com/joshdick/onedark.vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -209,15 +214,15 @@ _G.packer_plugins = {
     path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["prettier.nvim"] = {
+  ["spellsitter.nvim"] = {
     loaded = true,
-    path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/prettier.nvim",
-    url = "https://github.com/MunifTanjim/prettier.nvim"
+    path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/spellsitter.nvim",
+    url = "https://github.com/lewis6991/spellsitter.nvim"
   },
   ["surround.nvim"] = {
     loaded = true,
     path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/surround.nvim",
-    url = "https://github.com/blackcauldron7/surround.nvim"
+    url = "https://github.com/ur4ltz/surround.nvim"
   },
   ["telescope-symbols.nvim"] = {
     loaded = true,
@@ -249,11 +254,6 @@ _G.packer_plugins = {
     path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
-  ["vim-better-whitespace"] = {
-    loaded = true,
-    path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/vim-better-whitespace",
-    url = "https://github.com/ntpeters/vim-better-whitespace"
-  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/vim-commentary",
@@ -264,20 +264,15 @@ _G.packer_plugins = {
     path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/vim-matchup",
     url = "https://github.com/andymass/vim-matchup"
   },
-  vimwiki = {
+  ["vim-repeat"] = {
     loaded = true,
-    path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/vimwiki",
-    url = "https://github.com/vimwiki/vimwiki"
+    path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
   },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
-  },
-  ["zen-mode.nvim"] = {
-    loaded = true,
-    path = "/home/itsnexn/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
-    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

@@ -3,7 +3,6 @@
 -- =============================================
 local g = vim.g
 local colors = require("tokyonight.colors").setup({})
-local zmode = require("zen-mode")
 
 -- {{{ Vim Commentary
 g.commenter_comment_empty = false
@@ -33,53 +32,12 @@ require("surround").setup({
 })
 -- }}}
 
--- {{{ Vim better whitespace
-vim.cmd("highlight ExtraWhitespace guibg=" .. colors.red)
-g.better_whitespace_enabled = true
-g.strip_whitespace_on_save = true
-g.better_whitespace_filetypes_blacklist = { "dashboard" }
--- }}}
+-- {{{ Functions
 
--- {{{ Vim Wiki
-g.vimwiki_list = {
-	{
-		path = "~/Documents/Notes/",
-		syntax = "markdown",
-		ext = ".md",
-		template_path = "~/.config/nvim/other/templates/",
-		template_default = "default",
-		template_ext = ".html",
-		path_html = "~/Documents/Notes/html",
-		custom_wiki2html = "vimwiki_markdown",
-		html_filename_parameterization = 1,
-		css_name = nil,
-	},
-}
-vim.cmd("autocmd FileType vimwiki nnoremap <buffer> <Leader>wx :VimwikiToggleListItem<CR>")
--- }}}
-
--- {{{ ZenMode
-zmode.setup({
-	window = {
-		backdrop = 1,
-		options = {
-			signcolumn = "yes",
-			list = false,
-		},
-	},
-	plugins = {
-		options = {
-			enabled = true,
-			ruler = false,
-			showcmd = false,
-		},
-		twilight = { enabled = false },
-		gitsigns = { enabled = true },
-		tmux = { enabled = true },
-		kitty = {
-			enabled = true,
-			font = "+2",
-		},
-	},
-})
+-- Trim white spaces in the file
+function _G.TrimWhitespaces()
+    local pos = vim.api.nvim_win_get_cursor(0)
+    vim.cmd("keeppatterns %s/\\s\\+$//e")
+    vim.api.nvim_win_set_cursor(0, pos)
+end
 -- }}}

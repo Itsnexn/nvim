@@ -97,12 +97,8 @@ for more check out [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
 [telescope.nvim](https://github.com/vim-telescope/telescope.nvim),
 [telescope-symbols.nvim](https://github.com/vim-telescope/telescope-symbols.nvim),
 [git-signs.nvim](https://github.com/lewis6991/gitsigns.nvim),
-[firenvim](https://github.com/glacambre/firenvim),
 [todo-comments.nvim](https://github.com/folke/todo-comments.nvim),
-[vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace),
 [which-key.nvim](https://github.com/folke/which-key.nvim),
-[vimwiki](https://github.com/vimwiki/vimwiki),
-[zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
 
 # License
 itsnexn/nvim is licensed under the [MIT license](LICENSE).

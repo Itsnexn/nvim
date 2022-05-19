@@ -4,11 +4,9 @@
 
 local o = vim.opt
 local g = vim.g
-local colors = require("tokyonight.colors").setup({})
 local bind = vim.api.nvim_set_keymap
 
-g.mapleader = " " -- Leader.
-o.termguicolors = true -- Gui Colors. !IMPORTANT
+g.mapleader = " " -- Leader. o.termguicolors = true -- Gui Colors. !IMPORTANT
 o.clipboard = "unnamedplus" -- Set clipboard.
 o.encoding = "UTF-8" -- Text Encoding.
 o.mouse = "a" -- Enable mouse in all modes.
@@ -25,18 +23,33 @@ command Format :lua vim.lsp.buf.formatting_sync()
 ]])
 
 -- Theme {{{
+vim.cmd([[
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+if (has("termguicolors"))
+  set termguicolors
+endif
+]])
+
+g.colors = require("tokyonight.colors").setup({})
 g.tokyonight_style = "night"
-g.tokyonight_italic_comments = 1
-g.tokyonight_italic_functions = 1
-g.tokyonight_dark_sidebar = 0
-g.tokyonight_transparent_sidebar = 1
-g.tokyonight_terminal_colors = 0
-g.tokyonight_dark_float = 0
+g.tokyonight_italic_comments = true
+g.tokyonight_italic_functions = true
+g.tokyonight_dark_sidebar = false
+g.tokyonight_transparent_sidebar = true
+g.tokyonight_terminal_colors = false
+g.tokyonight_dark_float = false
 
 vim.cmd("colorscheme tokyonight")
-vim.cmd("highlight CursorLineNr term=bold guifg=" .. colors.yellow)
-vim.cmd("highlight RunitPrompt term=bold guifg=" .. colors.green)
-vim.cmd("highlight Wildmenu term=bold guifg=" .. colors.red)
+vim.cmd("highlight CursorLineNr term=bold guifg=" .. g.colors.yellow)
+vim.cmd("highlight RunitPrompt term=bold guifg=" .. g.colors.green)
+vim.cmd("highlight Wildmenu term=bold guifg=" .. g.colors.red)
 -- }}}
 
 -- Status bar {{{

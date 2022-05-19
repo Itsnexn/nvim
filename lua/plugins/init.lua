@@ -64,7 +64,7 @@ return require("packer").startup(function(use)
 	use({ "lukas-reineke/indent-blankline.nvim" })
 	-- }}
 
-	-- use {"github/copilot.vim"}
+	use({"github/copilot.vim"})
 
 	-- {{ Other
 	use({ "ur4ltz/surround.nvim" }) -- Vim surround but in lua
@@ -83,24 +83,13 @@ return require("packer").startup(function(use)
 		-- tag = "release" -- To use the latest release
 	})
 
-	use({ -- Embed Neovim in browsers
-		"glacambre/firenvim",
-		run = function()
-			vim.fn["firenvim#install"](0)
-		end,
-	})
-
 	use({ -- Better TODO comments for neovim
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
 
-	use({ "ntpeters/vim-better-whitespace" }) -- highlight trailing whitespaces
 	use({ "folke/which-key.nvim" }) -- Show Keyboard shortcuts
-	use({ "vimwiki/vimwiki" }) -- Vim WIKI
-	use({ "tpope.io/vim/repeat" }) -- Vim WIKI
+	use({ "tpope/vim-repeat" }) -- Vim WIKI
 
-	-- Distraction-free coding mode
-	use({ "folke/zen-mode.nvim" })
 	-- }}
 end)
