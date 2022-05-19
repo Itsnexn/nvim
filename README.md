@@ -11,9 +11,6 @@
 
 ---
 
-# How its looks?
-![screenshot](.github/screenshot.png)
-
 # Installation
 
 1. **install [packer](https://github.com/wbthomason/packer.nvim#quickstart)**
