@@ -15,27 +15,27 @@
 
 # Installation
 
-1. Make sure you have [Neovim Nightly](https://github.com/neovim/neovim/releases)
-(Neovim nighly is the latest build of neovim)
+1. Make sure you have [**Neovim Nightly**](https://github.com/neovim/neovim/releases)
+_(Neovim nighly is the latest build of neovim)_
 
-2. **install [packer](https://github.com/wbthomason/packer.nvim#quickstart)**
+2. install [**packer**](https://github.com/wbthomason/packer.nvim#quickstart)
 
-3. **clone the repository**
+3. clone the repository
 
     clone the repository to your `$XDG_CONFIG_HOME/nvim` directory:
     ```sh
     git clone https://github.com/itsnexn/nvim.git $XDG_CONFIG_HOME/nvim
     ```
 
-4. **install plugins**
+4. install plugins
 
 simply enter `:PlugInstall` to install plugins.
 
-5. **install Update treesitter**
+5. install Update treesitter
 
 while youre in nvim you enter `:TSUpdate` to update treesitter.
 
-6. **install language servers and formatters of your choice.**
+6. install language servers and formatters of your choice.
 
 my configurations comes with language servers and formatters for many languages.
 so you have to install what you want by yourself. after installing language server
