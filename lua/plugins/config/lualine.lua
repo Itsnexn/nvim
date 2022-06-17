@@ -33,8 +33,8 @@ lualine.setup({
 			{
 				"fileformat",
 				symbols = {
-					unix = " UNIX", -- e712
-					dos = " WIN", -- e70f
+					unix = " ", -- e712
+					dos = " ", -- e70f
 				},
 				color = { gui = "bold" },
 			},
