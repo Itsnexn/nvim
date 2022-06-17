@@ -2,7 +2,7 @@
 --           -== Git Signs ==-
 -- =============================================
 local gitsigns = require("gitsigns")
-local colors = require("tokyonight.colors").setup({})
+local g = vim.g
 
 gitsigns.setup({
 	signs = {
@@ -47,6 +47,6 @@ gitsigns.setup({
 	},
 })
 
-vim.cmd("highlight GitSignsAdd guifg=" .. colors.green)
-vim.cmd("highlight GitSignsChange guifg=" .. colors.green1)
-vim.cmd("highlight GitSignsDelete guifg=" .. colors.red)
+vim.cmd("highlight GitSignsAdd guifg=" .. g.colors.green)
+vim.cmd("highlight GitSignsChange guifg=" .. g.colors.yellow)
+vim.cmd("highlight GitSignsDelete guifg=" .. g.colors.red)

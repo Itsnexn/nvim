@@ -55,7 +55,7 @@ return require("packer").startup(function(use)
 	-- }}
 
 	-- UI {{
-	use({ "folke/tokyonight.nvim", branch = "main" })
+    use({ "catppuccin/nvim", as = "catppuccin" }) -- Catppuccin
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "lewis6991/spellsitter.nvim" })
 	use({ "nvim-lualine/lualine.nvim" })
@@ -64,7 +64,18 @@ return require("packer").startup(function(use)
 	use({ "lukas-reineke/indent-blankline.nvim" })
 	-- }}
 
-	use({"github/copilot.vim"})
+    -- Copilot {{
+    use ({
+        "zbirenbaum/copilot.lua",
+        event = {"VimEnter"},
+        config = function()
+                vim.defer_fn(function()
+                require("copilot").setup()
+            end, 100)
+        end,
+    })
+    use ({ "zbirenbaum/copilot-cmp", module = "copilot_cmp" })
+    -- }}
 
 	-- {{ Other
 	use({ "ur4ltz/surround.nvim" }) -- Vim surround but in lua
@@ -87,6 +98,7 @@ return require("packer").startup(function(use)
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
+    use({"ntpeters/vim-better-whitespace"}) -- Highlight whitespace
 
 	use({ "folke/which-key.nvim" }) -- Show Keyboard shortcuts
 	use({ "tpope/vim-repeat" }) -- Vim WIKI

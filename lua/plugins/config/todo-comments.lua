@@ -2,7 +2,7 @@
 --           -== TODO Comments ==-
 -- =============================================
 local todo_comments = require("todo-comments")
-local colors = require("tokyonight.colors").setup({})
+local g = vim.g
 
 todo_comments.setup({
 	signs = true,
@@ -36,9 +36,9 @@ todo_comments.setup({
 	-- list of named colors where we try to extract the guifg from the
 	-- list of hilight groups or use the hex color if hl not found as a fallback
 	colors = {
-		error = { "DiagnosticError", "ErrorMsg", colors.red },
-		info = { "DiagnosticInfo", colors.green },
-		hint = { "DiagnosticHint", colors.blue2 },
+		error = { "DiagnosticError", "ErrorMsg", g.colors.red },
+		info = { "DiagnosticInfo", g.colors.green },
+		hint = { "DiagnosticHint", g.colors.blue },
 	},
 	search = {
 		command = "rg",

@@ -5,12 +5,14 @@
 local o = vim.opt
 local g = vim.g
 local bind = vim.api.nvim_set_keymap
+local cp_api = require("catppuccin.api.colors")
 
 g.mapleader = " " -- Leader. o.termguicolors = true -- Gui Colors. !IMPORTANT
 o.clipboard = "unnamedplus" -- Set clipboard.
 o.encoding = "UTF-8" -- Text Encoding.
 o.mouse = "a" -- Enable mouse in all modes.
 o.completeopt = "menu,menuone,noselect" -- required by cmp
+o.updatetime = 250
 
 vim.cmd([[
 set path+=**/*
@@ -37,16 +39,10 @@ if (has("termguicolors"))
 endif
 ]])
 
-g.colors = require("tokyonight.colors").setup({})
-g.tokyonight_style = "night"
-g.tokyonight_italic_comments = true
-g.tokyonight_italic_functions = true
-g.tokyonight_dark_sidebar = false
-g.tokyonight_transparent_sidebar = true
-g.tokyonight_terminal_colors = false
-g.tokyonight_dark_float = false
+g.catppuccin_flavour = "mocha"
+g.colors = cp_api.get_colors()
 
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme catppuccin")
 vim.cmd("highlight CursorLineNr term=bold guifg=" .. g.colors.yellow)
 vim.cmd("highlight RunitPrompt term=bold guifg=" .. g.colors.green)
 vim.cmd("highlight Wildmenu term=bold guifg=" .. g.colors.red)
