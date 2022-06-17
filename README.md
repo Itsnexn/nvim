@@ -6,6 +6,8 @@
 <div align="center">
     <div>
         <img src="https://img.shields.io/github/stars/itsnexn/nvim?style=flat-square"/>
+        <img src="https://img.shields.io/github/repo-size/itsnexn/nvim?style=flat-square"/>
+        <img src="https://img.shields.io/github/issues/itsnexn/nvim?style=flat-square"/>
     </div>
 </div>
 
@@ -13,18 +15,21 @@
 
 # Installation
 
-1. **install [packer](https://github.com/wbthomason/packer.nvim#quickstart)**
+1. Make sure you have [Neovim Nightly](https://github.com/neovim/neovim/releases)
+(Neovim nighly is the latest build of neovim)
 
-2. **clone the repository**
+2. **install [packer](https://github.com/wbthomason/packer.nvim#quickstart)**
 
-clone the repository to your `$XDG_CONFIG_HOME/nvim` directory:
-```sh
-git clone https://github.com/itsnexn/nvim.git $XDG_CONFIG_HOME/nvim
-```
+3. **clone the repository**
+
+    clone the repository to your `$XDG_CONFIG_HOME/nvim` directory:
+    ```sh
+    git clone https://github.com/itsnexn/nvim.git $XDG_CONFIG_HOME/nvim
+    ```
 
 4. **install plugins**
 
-because how we sourcing plugins you'll probably get a lot of error in first time, so you can ignore it for now. then enter `:luafile $XDG_CONFIG_HOME/nvim/lua/plugins/init.lua` after that you can simply enter `:PlugInstall` to install plugins.
+simply enter `:PlugInstall` to install plugins.
 
 5. **install Update treesitter**
 
@@ -33,9 +38,12 @@ while youre in nvim you enter `:TSUpdate` to update treesitter.
 6. **install language servers and formatters of your choice.**
 
 my configurations comes with language servers and formatters for many languages.
-so you have to install what you want by yourself. after installing language server binary, you can enter `:LspInstall` to install language server. or enter `:LspInstallInfo` to see what language servers are available and install them.
+so you have to install what you want by yourself. after installing language server
+binary, you can enter `:LspInstall` to install language server. or enter `:LspInstallInfo`
+to see what language servers are available and install them.
 
 # List of language servers:
+
 - [bashls](https://github.com/bash-lsp/bash-language-server) - bash language server
 - [sumnko_lua](https://github.com/sumneko/lua-language-server) - lua language server
 - [tsserver](https://github.com/typescript-language-server/typescript-language-server) - typescript language server
@@ -45,6 +53,7 @@ so you have to install what you want by yourself. after installing language serv
 - [clangd](https://clangd.llvm.org/installation.html) - clangd
 
 # List of formatters and diagnostics:
+
 - [black](https://github.com/psf/black) - python formatter
 - [stylua](https://github.com/JohnnyMorganz/StyLua) - lua formatter
 - [prettier](https://github.com/prettier/prettier) - prettier js, ts, css, scss, html, json, yaml, markdown formatter
@@ -77,14 +86,12 @@ for more check out [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
 [close-buffers.vim](https://github.com/Asheq/close-buffers.vim),
 [nvim-auto-pairs](https://github.com/windwp/nvim-autopairs),
 [nvim-matchup](https://github.com/andymass/vim-matchup),
-[tokyonight.nvim](https://github.com/folke/tokyonight.nvim),
 [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter),
 [spellsitter.nvim](https://github.com/lewis6991/spellsitter.nvim),
 [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim),
 [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua),
 [dashboard.nvim](https://github.com/glepnir/dashboard-nvim),
 [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim),
-[github copilot](https://github.com/github/copilot.vim),
 [surround.nvim](https://github.com/ur4ltz/surround.nvim),
 [tpope Repeat](https://github.com/tpope/vim-repeat),
 [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua),
@@ -96,6 +103,9 @@ for more check out [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
 [git-signs.nvim](https://github.com/lewis6991/gitsigns.nvim),
 [todo-comments.nvim](https://github.com/folke/todo-comments.nvim),
 [which-key.nvim](https://github.com/folke/which-key.nvim),
+[copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
+[copilot.lua](https://github.com/zbirenbaum/copilot.lua)
+[catppuccin theme](https://github.com/catppuccin/nvim)
 
 # License
 itsnexn/nvim is licensed under the [MIT license](LICENSE).
