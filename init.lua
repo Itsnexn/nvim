@@ -13,7 +13,7 @@ License  : MIT
 
 --]]
 
-require("nvimrc")
 require("plugins")
+require("nvimrc")
 require("plugins/plugincfg")
 require("map")
