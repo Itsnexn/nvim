@@ -1,5 +1,4 @@
 --[[
-
 ███╗   ██╗███████╗██╗  ██╗███╗   ██╗
 ████╗  ██║██╔════╝╚██╗██╔╝████╗  ██║
 ██╔██╗ ██║█████╗   ╚███╔╝ ██╔██╗ ██║
@@ -16,4 +15,6 @@ License  : MIT
 require("plugins")
 require("nvimrc")
 require("plugins/plugincfg")
+require("cmd")
+require("autocmds")
 require("map")
