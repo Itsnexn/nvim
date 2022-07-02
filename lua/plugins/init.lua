@@ -64,19 +64,6 @@ return require("packer").startup(function(use)
 	use({ "lukas-reineke/indent-blankline.nvim" })
 	-- }}
 
-    -- Copilot {{
-    use ({
-        "zbirenbaum/copilot.lua",
-        event = {"VimEnter"},
-        config = function()
-                vim.defer_fn(function()
-                require("copilot").setup()
-            end, 100)
-        end,
-    })
-    use ({ "zbirenbaum/copilot-cmp", module = "copilot_cmp" })
-    -- }}
-
 	-- {{ Other
 	use({ "ur4ltz/surround.nvim" }) -- Vim surround but in lua
 	use({ "kyazdani42/nvim-tree.lua" }) -- File explorer/tree

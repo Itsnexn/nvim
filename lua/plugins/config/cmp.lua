@@ -26,7 +26,7 @@ cmp.setup({
         -- format = lspkind.cmp_format(),
         fields = { "kind", "abbr", "menu" },
         format = function(entry, vim_item)
-            local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+            local kind = lspkind.cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
             local strings = vim.split(kind.kind, "%s", { trimempty = true })
             kind.kind = " " .. strings[1] .. " "
             kind.menu = "    (" .. strings[2] .. ")"
@@ -35,7 +35,7 @@ cmp.setup({
         end,
     },
 	mapping = {
-		["<C-S-n>"] = cmp.mapping.select_prev_item(),
+		["<C-p>"] = cmp.mapping.select_prev_item(),
 		["<C-n>"] = cmp.mapping.select_next_item(),
         ['<C-d>'] = cmp.mapping.scroll_docs(-3),
         ['<C-f>'] = cmp.mapping.scroll_docs(3),
@@ -60,11 +60,10 @@ cmp.setup({
 		}),
 	},
 	sources = {
-        { name = "copilot", group_index = 10},
-		{ name = "nvim_lsp", priority = 9},
-		{ name = "luasnip", priority = 8},
-		{ name = "path", priority = 7},
-		{ name = "buffer", priority = 6},
+		{ name = "nvim_lsp"},
+		{ name = "luasnip"},
+		{ name = "path"},
+		{ name = "buffer"},
 	},
 
     completion = { -- Disable autocompletion cmp only works with C-Space

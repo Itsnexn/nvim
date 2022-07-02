@@ -26,7 +26,7 @@ todo_comments.setup({
 	-- * after: highlights after the keyword (todo text)
 	highlight = {
 		before = "", -- "fg" or "bg" or empty
-		keyword = "fg", -- "fg", "bg", "wide" or empty.
+		keyword = "bg", -- "fg", "bg", "wide" or empty.
 		after = "fg", -- "fg" or "bg" or empty
 		pattern = [[.*<(KEYWORDS)\s*:]], -- Vim regex
 		comments_only = true,

@@ -9,7 +9,6 @@ lspsaga.setup({ -- defaults ...
 		sign_priority = 40,
 		virtual_text = true,
 	},
-    dianostic_header_icon = "   ",
 	finder_definition_icon = "  ",
 	finder_reference_icon  = "  ",
 	max_preview_lines = 10,
